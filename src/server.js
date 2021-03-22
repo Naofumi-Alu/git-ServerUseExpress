@@ -12,6 +12,7 @@ server.set('view engine', 'ejs');
 
 
 
+
 //Instancia de MiddleWre (Funciones)
 const morgan = require('morgan');
 server.use(morgan('combined'));
@@ -19,7 +20,7 @@ server.use(morgan('combined'));
 
 
 //Requiriendo Rutas
-const routes = require('./routes.js');
+const routes = require('./routes/routes.js');
 const routesApi = require('./routes-api');
 
 
@@ -32,19 +33,4 @@ server.use(routes);
 server.use('/api', routesApi);
 server.get('*', (req, res) => {
     res.end('Not Found');
-});
-
-
-//servidor
-
-server.use((req, res, next) => {
-    console.log('Ha pasado por esta funcion');
-    next();
-});
-
-
-
-server.listen(3038, () => {
-    console.log('Server on port 3038 succsesful'.green);
-    console.log('Nombre del Servidor: ', server.get('ServerName'));
 });
