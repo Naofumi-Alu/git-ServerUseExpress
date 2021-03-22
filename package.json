@@ -1,0 +1,26 @@
+{
+    "name": "servers",
+    "version": "1.0.0",
+    "description": "Servidor para la pagina Web Tu Mascota",
+    "main": "index.js",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "git": "^0.1.5",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.7"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node index.js",
+        "desarrollo": "node index.js"
+    },
+    "keywords": [
+        "nodejs",
+        "Server",
+        "TuMascota"
+    ],
+    "author": "Alu-Naofumi-J-Iwatani",
+    "license": "ISC"
+}
