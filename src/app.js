@@ -3,6 +3,7 @@ const express = require('express');
 const colors = require('colors');
 const app = express();
 const config = require('./config.js');
+const path = require('path');
 
 
 
@@ -10,7 +11,9 @@ const config = require('./config.js');
 
 app.set("port", config);
 app.set('appName', 'TuMascotaServer');
-app.set('views', __dirname + '/views');
+//establece la direccion de la carpeta de las vistas por ejemplo
+app.set('views', path.join(__dirname + '/views'));
+//establece el motor de plantillas
 app.set('view engine', 'ejs');
 
 
@@ -18,6 +21,8 @@ app.set('view engine', 'ejs');
 
 //Instancia de MiddleWre (Funciones)
 const morgan = require('morgan');
+//se usa para saber que peticiones llegan al servidor
+app.use(morgan('dev'));
 app.use(morgan('combined'));
 
 
@@ -34,8 +39,11 @@ const routesApi = require('./routes/routes-api');
 
 app.use(routes);
 app.use('/api', routesApi);
+
+
+//404 handler
 app.get('*', (req, res) => {
-    res.end('Not Found');
+    res.status(404).render('404');
 });
 
 module.exports = app;

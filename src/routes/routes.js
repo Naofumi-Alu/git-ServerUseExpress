@@ -2,17 +2,17 @@
 
 const express = require('express');
 const router = express.Router();
-//-  /
-router.get('/', (req, res) => {
-    res.render('index.ejs');
+const { renderIndex, renderLoguin, createLoguinPerfil } = require('../controlers/entries.controler');
 
-});
+//-  /
+router.get('/', renderIndex);
 
 //  /loguin
-router.get('/loguin', (req, res) => {
-    res.render('loguin.ejs');
-});
+router.get('/loguin', renderLoguin);
 
+
+// Entrada de datos
+router.post('/loguin', createLoguinPerfil);
 
 //importar modulo router
 module.exports = router;
