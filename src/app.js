@@ -2,10 +2,13 @@
 const express = require('express');
 const colors = require('colors');
 const server = express();
+import config from "./config";
+
 
 
 //settings
 
+server.set("port", config.PORT);
 server.set('ServerName', 'TuMascotaServer');
 server.set('views', __dirname + '/views');
 server.set('view engine', 'ejs');
@@ -21,7 +24,7 @@ server.use(morgan('combined'));
 
 //Requiriendo Rutas
 const routes = require('./routes/routes.js');
-const routesApi = require('./routes-api');
+const routesApi = require('./routes/routes-api');
 
 
 //requerir rutas del archivo routes donde se establecen
@@ -34,3 +37,6 @@ server.use('/api', routesApi);
 server.get('*', (req, res) => {
     res.end('Not Found');
 });
+
+module.exports = server;
+//export default server;

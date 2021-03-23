@@ -1,11 +1,10 @@
-
 //servidor config
 
-import server from "./server";
 
+const app = require('./app');
 
-server.listen(server.get("port"));
-console.log("Server on port", app.get("port")); *
+app.listen(app.get("port"));
+console.log("Server on port", app.get("port"));
 
 
 /*
