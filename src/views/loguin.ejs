@@ -1,6 +1,62 @@
-<%- include('partials/navigation.ejs')-%>
 
-<h1>Loguin</h1>
-<form class='' action="index.html" method="post">
-    <input type="text">
-</form>
+     
+
+<%- include ('partials/headers.ejs')-%>
+
+      
+     <form  method="post" >
+
+       <div class= "col-md-4 offset-3 md2">
+              <h2 class="text center">Register you Account</h2>
+      </div>
+     <!--Name-->
+       <div class="form-group">
+              <label for="tittle">Nombre</label>
+              <input type="text" name="tittle" class="form-control" placefoloder="Entry a nombre" required>
+       </div>
+   <!--Apellido-->
+   <div class="form-group">
+              <label for="tittle">Apellido</label>
+              <input type="text" name="tittle" class="form-control" placefoloder="Entry a apellido" required>
+       </div>
+   <!--Telefono_Celular-->
+   <div class="form-group">
+              <label for="tittle">Telefono celular</label>
+              <input type="text" name="tittle" class="form-control" placefoloder="Entry a telefono celular" required>
+       </div>
+   <!--E-Mail--> 
+   <div class="form-group">
+              <label for="tittle">E-mail</label>
+              <input type="text" name="tittle" class="form-control" placefoloder="Entry a E-mail" required>
+       </div>
+   <!--Nombre de la mascota--> 
+   <div class="form-group">
+              <label for="tittle">Nombre de la Mascota</label>
+              <input type="text" name="tittle" class="form-control" placefoloder="Entry a nombre de la mascota" required>
+       </div>
+   <!--UserName--> 
+   <div class="form-group">
+              <label for="tittle">UserName</label>
+              <input type="text" name="tittle" class="form-control" placefoloder="Entry a UserName" required>
+       </div>
+   <!--contrasela-->
+   <div class="form-group">
+              <label for="tittle">Contraseña</label>
+              <input type="text" name="tittle" class="form-control" placefoloder="Entry a Password" required>
+       </div>
+
+<!--Comentarios-->
+       <div class="form-group">
+              <label for="body">EntryComents</label>
+
+              <textarea name="body" id="body" rows="3" class="format-control"required></textarea>
+       </div>
+<!--Boton de envio -->
+       <div class="form-group">
+                     <input type="submit" value="Sign in" class="btn btn-primary">
+              </div>
+        </form>
+        
+
+ <%- include ('partials/footer.ejs') -%>
+     
