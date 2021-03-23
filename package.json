@@ -1,6 +1,6 @@
 {
     "name": "servers",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Servidor para la pagina Web Tu Mascota",
     "main": "index.js",
     "dependencies": {
