@@ -1,14 +1,7 @@
-//import { config } from "dotenv";
-import { config } from "dotenv";
-config();
+//Config
 
-export default {
-    PORT: process.env.PORT || 5000,
-};
+const dotenv = require('dotenv').config();
 
+const PORT = process.env.PORT || 4000;
 
-/*const config = require('dotenv').config();
-
-
-module.exports = config || 5000;
-*/
+module.exports = PORT;

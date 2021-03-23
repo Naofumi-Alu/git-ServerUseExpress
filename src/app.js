@@ -1,24 +1,24 @@
 //instancia de modulos o Framworks
 const express = require('express');
 const colors = require('colors');
-const server = express();
-import config from "./config";
+const app = express();
+const config = require('./config.js');
 
 
 
 //settings
 
-server.set("port", config.PORT);
-server.set('ServerName', 'TuMascotaServer');
-server.set('views', __dirname + '/views');
-server.set('view engine', 'ejs');
+app.set("port", config);
+app.set('appName', 'TuMascotaServer');
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 
 
 
 
 //Instancia de MiddleWre (Funciones)
 const morgan = require('morgan');
-server.use(morgan('combined'));
+app.use(morgan('combined'));
 
 
 
@@ -32,11 +32,11 @@ const routesApi = require('./routes/routes-api');
 
 //Rutas
 
-server.use(routes);
-server.use('/api', routesApi);
-server.get('*', (req, res) => {
+app.use(routes);
+app.use('/api', routesApi);
+app.get('*', (req, res) => {
     res.end('Not Found');
 });
 
-module.exports = server;
-//export default server;
+module.exports = app;
+//export default app;
