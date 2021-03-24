@@ -13,9 +13,14 @@ const renderLoguin = (req, res) => {
 };
 
 
+const createPerfil = (req, res) => {
+    console.log(req.body);
+    res.send('recived');
 
+}
 
 module.exports = {
     renderIndex,
-    renderLoguin
+    renderLoguin,
+    createPerfil
 }
