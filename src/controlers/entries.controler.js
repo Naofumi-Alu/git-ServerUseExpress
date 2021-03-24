@@ -1,7 +1,8 @@
 //Renderiz ala vista principal al usuario
 
-const { response } = require("express");
 
+
+//Renderiza el inicio
 const renderIndex = (req, res) => {
     res.render('index.ejs');
 };
@@ -12,14 +13,9 @@ const renderLoguin = (req, res) => {
 };
 
 
-//entrada de datos
-const createLoguinPerfil = (req, res) => {
-    console.log(req.body);
-    res.send('recived');
-};
+
 
 module.exports = {
     renderIndex,
-    renderLoguin,
-    createLoguinPerfil
+    renderLoguin
 }

@@ -4,6 +4,8 @@
     "description": "Servidor para la pagina Web Tu Mascota",
     "main": "index.js",
     "dependencies": {
+        "body": "^5.1.0",
+        "body-parser": "^1.19.0",
         "colors": "^1.4.0",
         "cross-env": "^7.0.3",
         "dotenv": "^8.2.0",

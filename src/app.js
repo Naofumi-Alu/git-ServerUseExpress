@@ -19,8 +19,10 @@ app.set('view engine', 'ejs');
 
 
 
-//Instancia de MiddleWre (Funciones)
+//**----Instancia de MiddleWre (Funciones)--**
 const morgan = require('morgan');
+
+
 //se usa para saber que peticiones llegan al servidor
 app.use(morgan('dev'));
 app.use(morgan('combined'));
