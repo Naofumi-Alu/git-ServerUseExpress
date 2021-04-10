@@ -18,3 +18,6 @@ estatus actual, solo contiene un Servidor sencillo que enruta a aun loguin y a u
  
  npm install
 
+
+ ultimos cambios para despues
+
