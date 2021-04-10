@@ -4,7 +4,8 @@ const colors = require('colors');
 const app = express();
 const config = require('./config.js');
 const path = require('path');
-
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
 
 
 //settings
@@ -48,5 +49,8 @@ app.get('*', (req, res) => {
     res.status(404).render('404');
 });
 
-module.exports = app;
+module.exports = {
+    bodyParser,
+    jsonParser
+};
 //export default app;

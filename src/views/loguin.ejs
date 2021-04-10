@@ -4,7 +4,7 @@
 <%- include ('partials/headers.ejs')-%>
 
       
-     <form  method="post" >
+     <form  method="post" action="/loguin" >
 
        <div class= "col-md-4 offset-3 md2">
               <h2 class="text center">Register you Account</h2>
@@ -12,27 +12,15 @@
      <!--Name-->
        <div class="form-group">
               <label for="tittle">UserName</label>
-              <input type="text" name="nombre" id="id-nombre" class="form-control" placefoloder="Entry a name" required>
+              <input type="text" name="username" id="idUserName" class="form-control" placefoloder="Entry a name" required>
        </div>
    <!--Apellido-->
  <div class="form-group">
               <label for="tittle">Password</label>
-              <input type="Password" name="ps" id="id-apellido" class="form-control" placefoloder="Entry a name" required>
+              <input type="Password" name="ps" id="idPs" class="form-control" placefoloder="Entry a name" required>
        </div>
-   <!--Telefono_Celular-->
-  
-   <!--E-Mail--> 
-  
-   <!--Nombre de la mascota--> 
-   
-   <!--UserName--> 
-   
-   <!--contrasela-->
-   <
 
-<!--Comentarios-->
-     
-<!--Boton de envio -->
+<!--Button submit -->
        <div class="form-group">
                      <input type="submit" value="Sign in" class="btn btn-primary">
               </div>
